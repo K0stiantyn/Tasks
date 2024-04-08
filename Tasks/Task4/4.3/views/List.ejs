@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <title>Student List</title>
+</head>
+<body>
+  <h1>Student List</h1>
+  <% if (students.length > 0) { %>
+    <ul>
+      <% students.forEach(student => { %>
+        <li>
+          ID: <%= student.id %> - Name: <%= student.fullName %> (<%= student.code %>, <%= student.fieldOfStudies %>)
+        </li>
+      <% }); %>
+    </ul>
+  <% } else { %>
+    <p>No students found yet.</p>
+  <% } %>
+  <a href="/">Home</a>
+</body>
+</html>

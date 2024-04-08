@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <%- include('./partials/head.ejs', { pageTitle: 'Student List' }) %>
+</head>
+<body>
+  <%- include('./partials/navigation.ejs') %>
+  <h1>Student List</h1>
+  <% if (students.length > 0) { %>
+    <ul>
+      <% students.forEach(student => { %>
+        <li>
+          <p>Name: <%= student.fullName %></p>
+          <p>Code: <%= student.code %></p>
+          <p>Field of Studies: <%= student.fieldOfStudies %></p>
+        </li>
+      <% }); %>
+    </ul>
+  <% } else { %>
+    <p>No students found yet.</p>
+  <% } %>
+</body>
+</html>
