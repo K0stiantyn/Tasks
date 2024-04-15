@@ -1,0 +1,11 @@
+<!-- // zad2/views/books.ejs -->
+<%- include('partials/navigation') %>
+<% if (books.length === 0) { %>
+    <p>No books has been found</p>
+<% } else { %>
+    <ul>
+    <% books.forEach(book => { %>
+        <li><%= book.title %></li>
+    <% }) %>
+    </ul>
+<% } %>
